@@ -18,7 +18,7 @@ server.on("request", function(req, res) {
     })
     .on("end", async () => {
       const input = Buffer.concat(chunks);
-      console.log("Rasterizing vector", input.toString("utf8"));
+      console.log("Start rasterizing vector");
       try {
         const png = await converter.convert(input, {
           background: "#fff"
@@ -26,6 +26,7 @@ server.on("request", function(req, res) {
         res.writeHead(200);
         res.end(png);
       } catch (err) {
+        console.error(err);
         res.writeHead(500);
         res.end(err.stack);
       }
