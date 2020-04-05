@@ -1,6 +1,16 @@
-const Converter = require("convert-svg-to-png");
+const process = require("process");
 const http = require("http");
+
+const Sentry = require("@sentry/node");
+const Converter = require("convert-svg-to-png");
 const uuid = require("uuid");
+
+// Initate Sentry if the environ is set.
+if (process.env.SENTRY_DSN) {
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN
+  });
+}
 
 const converter = Converter.createConverter();
 
@@ -26,6 +36,7 @@ server.on("request", function(req, res) {
         res.writeHead(200);
         res.end(png);
       } catch (err) {
+        Sentry.captureException(err);
         console.error(err);
         res.writeHead(500);
         res.end(err.stack);

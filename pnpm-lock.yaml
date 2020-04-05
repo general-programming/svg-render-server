@@ -1,8 +1,96 @@
 dependencies:
+  '@sentry/node': 5.15.4
   convert-svg-to-png: 0.5.0
   uuid: 7.0.3
 lockfileVersion: 5.1
 packages:
+  /@sentry/apm/5.15.4:
+    dependencies:
+      '@sentry/browser': 5.15.4
+      '@sentry/hub': 5.15.4
+      '@sentry/minimal': 5.15.4
+      '@sentry/types': 5.15.4
+      '@sentry/utils': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-gcW225Jls1ShyBXMWN6zZyuVJwBOIQ63sI+URI2NSFsdpBpdpZ8yennIm+oMlSfb25Nzt9SId7TRSjPhlSbTZQ==
+  /@sentry/browser/5.15.4:
+    dependencies:
+      '@sentry/core': 5.15.4
+      '@sentry/types': 5.15.4
+      '@sentry/utils': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-l/auT1HtZM3KxjCGQHYO/K51ygnlcuOrM+7Ga8gUUbU9ZXDYw6jRi0+Af9aqXKmdDw1naNxr7OCSy6NBrLWVZw==
+  /@sentry/core/5.15.4:
+    dependencies:
+      '@sentry/hub': 5.15.4
+      '@sentry/minimal': 5.15.4
+      '@sentry/types': 5.15.4
+      '@sentry/utils': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-9KP4NM4SqfV5NixpvAymC7Nvp36Zj4dU2fowmxiq7OIbzTxGXDhwuN/t0Uh8xiqlkpkQqSECZ1OjSFXrBldetQ==
+  /@sentry/hub/5.15.4:
+    dependencies:
+      '@sentry/types': 5.15.4
+      '@sentry/utils': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-1XJ1SVqadkbUT4zLS0TVIVl99si7oHizLmghR8LMFl5wOkGEgehHSoOydQkIAX2C7sJmaF5TZ47ORBHgkqclUg==
+  /@sentry/minimal/5.15.4:
+    dependencies:
+      '@sentry/hub': 5.15.4
+      '@sentry/types': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-GL4GZ3drS9ge+wmxkHBAMEwulaE7DMvAEfKQPDAjg2p3MfcCMhAYfuY4jJByAC9rg9OwBGGehz7UmhWMFjE0tw==
+  /@sentry/node/5.15.4:
+    dependencies:
+      '@sentry/apm': 5.15.4
+      '@sentry/core': 5.15.4
+      '@sentry/hub': 5.15.4
+      '@sentry/types': 5.15.4
+      '@sentry/utils': 5.15.4
+      cookie: 0.3.1
+      https-proxy-agent: 4.0.0
+      lru_map: 0.3.3
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-OfdhNEvOJZ55ZkCUcVgctjaZkOw7rmLzO5VyDTSgevA4uLsPaTNXSAeK2GSQBXc5J0KdRpNz4sSIyuxOS4Z7Vg==
+  /@sentry/types/5.15.4:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-quPHPpeAuwID48HLPmqBiyXE3xEiZLZ5D3CEbU3c3YuvvAg8qmfOOTI6z4Z3Eedi7flvYpnx3n7N3dXIEz30Eg==
+  /@sentry/utils/5.15.4:
+    dependencies:
+      '@sentry/types': 5.15.4
+      tslib: 1.11.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-lO8SLBjrUDGADl0LOkd55R5oL510d/1SaI08/IBHZCxCUwI4TiYo5EPECq8mrj3XGfgCyq9osw33bymRlIDuSQ==
   /agent-base/4.3.0:
     dependencies:
       es6-promisify: 5.0.0
@@ -11,6 +99,12 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
+  /agent-base/5.1.1:
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-TMeqbNl2fMW0nMjTEPOwe3J/PRFP4vqeoNuQMG0HlMrtm5QxKqdvAkZ1pRBQ/ulIyDD5Yq0nJ7YbdD8ey0TO3g==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.3
@@ -107,6 +201,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Pzg2IEirPdN/VXovG9NY8H5Ww3PUEohMcyu9a11E0G0/oVcbPLWQYE3/S6mxpjidqzYr1i5iKLTKCiU9hctKFQ==
+  /cookie/0.3.1:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
   /core-util-is/1.0.2:
     dev: false
     resolution:
@@ -203,6 +303,15 @@ packages:
       node: '>= 4.5.0'
     resolution:
       integrity: sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
+  /https-proxy-agent/4.0.0:
+    dependencies:
+      agent-base: 5.1.1
+      debug: 4.1.1
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-zoDhWrkR3of1l9QAL8/scJZyLu8j/gBkcwcaQOZh7Gyh/+uJQzGVETdgT30akuwkpL8HTRfssqI3BZuV18teDg==
   /inflight/1.0.6:
     dependencies:
       once: 1.4.0
@@ -226,6 +335,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
+  /lru_map/0.3.3:
+    dev: false
+    resolution:
+      integrity: sha1-tcg1G5Rky9dQM1p5ZQoOwOVhGN0=
   /mime/2.4.4:
     dev: false
     engines:
@@ -360,6 +473,10 @@ packages:
       node: '>=0.6.0'
     resolution:
       integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==
+  /tslib/1.11.1:
+    dev: false
+    resolution:
+      integrity: sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
   /typedarray/0.0.6:
     dev: false
     resolution:
@@ -391,5 +508,6 @@ packages:
     resolution:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
 specifiers:
+  '@sentry/node': ^5.15.4
   convert-svg-to-png: ^0.5.0
   uuid: ^7.0.3
