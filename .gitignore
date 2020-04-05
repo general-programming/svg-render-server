@@ -5,6 +5,8 @@ sharder.log
 *~
 yarn.lock
 secrets.json
+.envrc
+
 # Logs
 logs
 *.log
