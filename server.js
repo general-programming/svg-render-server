@@ -1,17 +1,17 @@
 const Converter = require("convert-svg-to-png");
 const http = require("http");
+const uuid = require("uuid");
 
 const converter = Converter.createConverter();
 
 const server = http.createServer();
 server.listen(8113);
 
-let counter = 0;
-
 server.on("request", function(req, res) {
-  const id = counter++;
-  console.time("Req start: " + id);
+  const id = uuid.v4();
   const chunks = [];
+
+  console.time("Req start: " + id);
   req
     .on("data", chunk => {
       chunks.push(chunk);

@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "convert-svg-to-png": "^0.5.0"
+    "convert-svg-to-png": "^0.5.0",
+    "uuid": "^7.0.3"
   }
 }
