@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  server:
+    image: generalprogramming/svg-render-server
+    networks:
+      - publicweb
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.port=8113
+        - traefik.docker.network=publicweb
+        # Routes
+        - traefik.frontend.rule=Host:svgrender.catgirls.dev
+      restart_policy:
+        condition: any
+
+networks:
+  publicweb:
+    driver: overlay
+    external: true
